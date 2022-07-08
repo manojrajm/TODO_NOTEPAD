@@ -70,6 +70,6 @@ view.addEventListener('click', () => {
 window.onload = function () {
   var list = document.getElementById('ul-el');
   const data = getData();
-  elements = JSON.parse(localStorage.getItem("elements")); 
+  elements = JSON.parse(localStorage.getItem("elements")) || []; 
   list.innerHTML=data;
 }
