@@ -2,6 +2,7 @@ const box = document.querySelector('.box');
 const text = document.querySelector('.text');
 const save = document.querySelector('.save');
 const view = document.querySelector('.view');
+const del = document.querySelector('.del');
 const togglebtn = document.getElementsByClassName('togglebtn');
 const input = document.getElementById('input-el');
 const cntnt = document.querySelector('.cntnt')
@@ -19,6 +20,7 @@ toggle.addEventListener("click",()=>{
   text.classList.toggle('active');
   save.classList.toggle('active');
   view.classList.toggle('active'); 
+  del.classList.toggle('active');
   if (cntnt.style.display === "grid") {
     cntnt.style.display = "none";
   } else {
@@ -67,9 +69,26 @@ view.addEventListener('click', () => {
   // deleteValue();
 })
 
+
+del.addEventListener("click",()=>{
+  let shift = elements.pop(elements)
+  
+  for (let i = 0; i < elements.length; i++) {
+         let shift = elements.splice(i, elements.length);
+  
+   console.log(shift);
+  }
+})
+// function deleteVal(){
+//   for (let i = 0; i < elements.length; i++) {
+//     var shift = elements.splice(i, elements.length);
+//     console.log(shift);
+// }
+// }
 window.onload = function () {
   var list = document.getElementById('ul-el');
   const data = getData();
   elements = JSON.parse(localStorage.getItem("elements")) || []; 
   list.innerHTML=data;
 }
+ 

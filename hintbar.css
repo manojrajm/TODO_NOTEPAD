@@ -86,9 +86,10 @@ transform: scale(1);
 }
 .view{
     position: absolute;
+    display: block;
     z-index: 999;
     margin-left: 15px;
-    margin-top: 230px;
+    margin-top: 280px;
     align-items: center;
     opacity: 0;
     background: blue;
@@ -100,6 +101,26 @@ transform: scale(1);
     transition-duration: .2s;
 }
 .view.active{
+    opacity: 1;
+    transition-delay: .8s;
+}
+
+.del{
+    position: absolute;
+    z-index: 999;
+    margin-left: 15px;
+    margin-top: 230px;
+    align-items: center;
+    opacity: 0;
+    background: blue;
+    width: 60px;
+    
+}
+.del:hover{
+    background: none;
+    transition-duration: .2s;
+}
+.del.active{
     opacity: 1;
     transition-delay: .8s;
 }
