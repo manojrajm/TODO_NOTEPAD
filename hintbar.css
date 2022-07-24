@@ -87,6 +87,7 @@ transform: scale(1);
 .view{
     position: absolute;
     display: block;
+    
     z-index: 999;
     margin-left: 15px;
     margin-top: 280px;
@@ -126,7 +127,7 @@ transform: scale(1);
 }
 .cntnt{
     display: none;
-    
+    overflow: scroll;
     word-break: break-all;
     background-color:#fff;
     text-align: center;
